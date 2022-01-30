@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <ProgressBar
+            android:id="@+id/progressBarCelcius"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/circle_shape"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="65"
+            android:progressDrawable="@drawable/circular_progress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/celcius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Celcius"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/progressBarCelcius"
+            app:layout_constraintEnd_toEndOf="@+id/progressBarCelcius"
+            app:layout_constraintStart_toStartOf="@+id/progressBarCelcius"
+            app:layout_constraintTop_toTopOf="@+id/progressBarCelcius" />
+
+        <ProgressBar
+            android:id="@+id/progressBarFah"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/circle_shape"
+            android:indeterminate="false"
+            android:max="212"
+            android:progress="65"
+            android:progressDrawable="@drawable/circular_progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fahrenheit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Fahrenheit"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/progressBarFah"
+            app:layout_constraintEnd_toEndOf="@+id/progressBarFah"
+            app:layout_constraintStart_toStartOf="@+id/progressBarFah"
+            app:layout_constraintTop_toTopOf="@+id/progressBarFah" />
+
+        <ProgressBar
+            android:id="@+id/progressBarHumidity"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/circle_shape"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="65"
+            android:progressDrawable="@drawable/circular_progress"
+            app:layout_constraintEnd_toStartOf="@+id/progressBarFah"
+            app:layout_constraintStart_toEndOf="@+id/progressBarCelcius"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarFah" />
+
+        <TextView
+            android:id="@+id/humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Humidity"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/progressBarHumidity"
+            app:layout_constraintEnd_toEndOf="@+id/progressBarHumidity"
+            app:layout_constraintStart_toStartOf="@+id/progressBarHumidity"
+            app:layout_constraintTop_toTopOf="@+id/progressBarHumidity" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/manualOverride"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:text="Manual Override"
+            app:trackTint="@color/white"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/progressBarHumidity"
+            app:layout_constraintStart_toStartOf="@+id/progressBarHumidity"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarHumidity"
+            app:thumbTint="#007DD6" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/ac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="60dp"
+            android:enabled="false"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:text="AC"
+            app:trackTint="@color/white"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manualOverride"
+            app:thumbTint="#007DD6" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/heater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="60dp"
+            android:enabled="false"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:text="Heater"
+            app:trackTint="@color/white"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manualOverride"
+            app:thumbTint="#007DD6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
